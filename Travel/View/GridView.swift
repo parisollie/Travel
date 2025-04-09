@@ -3,7 +3,7 @@
 //  Travel
 //
 //  Created by Paul F on 07/03/25.
-//  Final
+//  
 import SwiftUI
 
 struct GridView: View {
@@ -53,17 +53,24 @@ struct GridView: View {
 
 #Preview {
     // Crear un estado de prueba para las propiedades @Binding
-    @State var show = false
-    @State var selected = data[0] // Selecciona el primer elemento de los datos
-    @State var loadView = false
-    @Namespace var namespace
+    @Previewable @State var show = false
+    // Selecciona el primer elemento de los datos
+    @Previewable @State var selected = data[0]
+    @Previewable @State var loadView = false
+    @Previewable @Namespace var namespace
     
     return GridView(
-        columns: Array(repeating: GridItem(.flexible(), spacing: 15), count: 2), // 2 columnas
-        data: data, // Tus datos de prueba
-        show: $show, // Estado de prueba para show
-        selected: $selected, // Estado de prueba para selected
-        loadView: $loadView, // Estado de prueba para loadView
-        namespace: namespace // Namespace de prueba
+        // 2 columnas
+        columns: Array(repeating: GridItem(.flexible(), spacing: 15), count: 2),
+        // Tus datos de prueba
+        data: data,
+        // Estado de prueba para show
+        show: $show,
+        // Estado de prueba para selected
+        selected: $selected,
+        // Estado de prueba para loadView
+        loadView: $loadView,
+        // Namespace de prueba
+        namespace: namespace
     )
 }

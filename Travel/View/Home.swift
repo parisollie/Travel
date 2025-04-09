@@ -33,14 +33,12 @@ struct Home: View {
                     
                     Spacer()
                
-                    
                     // Paso 1.4
                     Button(action: {}) {
                         
                         Image("menu")
                             .renderingMode(.original)
                     }
-                    
                     
                 }
                 
